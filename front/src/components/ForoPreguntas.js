@@ -15,7 +15,7 @@ const ForoPreguntas = (props) => {
   };
 
   const setupWS = () => {
-    const wss = new WebSocket(process.env.public_url || "ws://localhost:3001");
+    const wss = new WebSocket("ws://covid19-myths.herokuapp.com");
 
     wss.onopen = () => {
       console.log("WS Client connected");
@@ -30,7 +30,7 @@ const ForoPreguntas = (props) => {
   useEffect(() => {
     props.setInitial(false);
     setupWS();
-  }, []);
+  }, [props]);
 
   const handleSearch = (e) => {
     e.preventDefault();
