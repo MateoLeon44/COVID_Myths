@@ -34,6 +34,7 @@ const Noticias = (props) => {
   };
 
   useEffect(() => {
+    props.setInitial(false);
     window.addEventListener("scroll", loadMore);
     fetch("/news/getNews", {
       method: "GET",

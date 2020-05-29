@@ -57,7 +57,7 @@ const Menu = (props) => {
           <Route
             path="/noticias"
             exact
-            component={() => <Noticias setUser={props.setUser}></Noticias>}
+            component={() => <Noticias setUser={props.setUser} setInitial={setInitial}></Noticias>}
           ></Route>
           <Route
             path="/verDetalleNoticia"

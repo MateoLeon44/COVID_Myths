@@ -97,8 +97,8 @@ const Comentarios = (props) => {
         .then((res) => res.json())
         .then((json) => {
           console.log(json);
-          const l = listarComentarios(json.preguntas);
-          setcomentarios(l);
+          
+          setcomentarios(json.preguntas);
         });
     });
   };
@@ -143,7 +143,7 @@ const Comentarios = (props) => {
             {comentarios ? (
               comentarios.map((elem, index) => {
                 return (
-                  <li key={elem._id} className="list-group-item">
+                  <li key={index} className="list-group-item">
                     {elem.contenido}
                   </li>
                 );

@@ -15,7 +15,7 @@ const Navbar = (props) => {
         <nav className="navbar navbar-light">
           <Link className="navbar-brand" to="/">
             <img
-              src="logo.png"
+              src="./img/ask.png"
               width="50"
               height="50"
               className="d-inline-block align-top"

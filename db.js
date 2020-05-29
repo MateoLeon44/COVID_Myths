@@ -419,6 +419,22 @@ const MongoUtils = () => {
     );
   };
 
+  
+  MyMongoLib.getCommentarios = (criteria, page) => {
+    console.log(criteria);
+    return MyMongoLib.connect(url).then((client) =>
+      client
+        .db(dbName)
+        .collection("comentarios")
+        .find(criteria)
+        .sort([["_id", -1]])
+        .skip((page-1)*10)
+        .limit(10)        
+        .toArray()
+        .finally(() => client.close())
+    );
+  };
+
   MyMongoLib.getUpVotesByText = (text) => {
     return MyMongoLib.connect(url).then((client) =>
       client
