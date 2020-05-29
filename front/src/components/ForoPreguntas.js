@@ -15,7 +15,7 @@ const ForoPreguntas = (props) => {
   };
 
   const setupWS = () => {
-    const wss = new WebSocket("ws://covid19-myths.herokuapp.com");
+    const wss = new WebSocket("wss://covid19-myths.herokuapp.com");
 
     wss.onopen = () => {
       console.log("WS Client connected");
