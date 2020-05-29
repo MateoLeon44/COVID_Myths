@@ -24,10 +24,10 @@ const Navbar = (props) => {
           </Link>
 
           <div className="text-right">
-            <Link className="btnLogin" to="/register">
+            <Link className="btnHomePage" to="/register">
               Registrate
             </Link>
-            <Link className="btnLogin" to="/login">
+            <Link className="btnHomePage" to="/login">
               Ingresa
             </Link>
           </div>
