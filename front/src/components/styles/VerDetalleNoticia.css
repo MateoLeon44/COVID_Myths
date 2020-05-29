@@ -48,6 +48,10 @@
     margin-bottom: 30px;
   }
   
+    .card-header{
+        color:black;
+}
+
   .title{
     font-size: 45px;
   }
